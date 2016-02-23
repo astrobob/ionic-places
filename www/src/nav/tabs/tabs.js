@@ -17,9 +17,10 @@ angular.module('places')
 				},
 				views: {
 					'tab-my-place': {
-						templateUrl: 'src/places/mines/my-place.html'
+						templateUrl: 'src/places/mines/my-place.html',
+						controller: 'MyPlaceCtrl as myPlace'
 					}
-				}
+				},
 			})
 			.state('tab.add-place', {
 				url: '/add-place',
@@ -39,7 +40,8 @@ angular.module('places')
 				},
 				views: {
 					'tab-around-me': {
-						templateUrl: 'src/places/around/around-me.html'
+						templateUrl: 'src/places/around/around-me.html',
+						controller: 'MapCtrl'
 					}
 				}
 			})
