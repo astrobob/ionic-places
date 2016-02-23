@@ -1,0 +1,33 @@
+<!--
+Create tabs with an icon and label, using the tabs-positive style.
+Each tab's child <ion-nav-view> directive will have its own
+navigation history that also transitions its views in and out.
+-->
+<ion-tabs class="tabs-icon-top tabs-color-active-positive">
+
+  <!-- My place Tab -->
+  <ion-tab title="My place" icon-off="ion-ios-list" icon-on="ion-ios-list-outline" ui-sref="tab.myplace">
+    <ion-nav-view name="tab-myplace" class="has-header"></ion-nav-view>
+  </ion-tab>
+
+  <!-- Add place Tab -->
+  <ion-tab title="Add place" icon-off="ion-ios-plus" icon-on="ion-ios-plus-outline" ui-sref="tab.addplace">
+    <ion-nav-view name="tab-addplace" class="has-header"></ion-nav-view>
+  </ion-tab>
+
+  <!-- Around me Tab -->
+  <ion-tab title="Around me" icon-off="ion-map" icon-on="ion-map" ui-sref="tab.aroundme">
+    <ion-nav-view name="tab-aroundme" class="has-header"></ion-nav-view>
+  </ion-tab>
+
+  <!-- Friends Tab -->
+  <ion-tab title="Friends" icon-off="ion-ios-people-outline" icon-on="ion-ios-people" ui-sref="tab.friends">
+    <ion-nav-view name="tab-friends" class="has-header"></ion-nav-view>
+  </ion-tab>
+
+  <!-- More Tab -->
+  <ion-tab title="More" icon-off="ion-ios-more-outline" icon-on="ion-ios-more" ui-sref="tab.more">
+    <ion-nav-view name="tab-more" class="has-header"></ion-nav-view>
+  </ion-tab>
+
+</ion-tabs>
