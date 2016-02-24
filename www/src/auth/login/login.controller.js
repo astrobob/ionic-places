@@ -3,7 +3,9 @@ angular.module('places')
 
 
 		$scope.login=function(){
-			LoginService.login();
+			LoginService.login($scope.email, $scope.password).then(function(data) {
+				$state.go();
+			});
 		};
 
 

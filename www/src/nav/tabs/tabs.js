@@ -7,7 +7,12 @@ angular.module('places')
 			.state('tab', {
 				url: "/tab",
 				abstract: true,
-				templateUrl: "src/nav/menu/menu.html"
+				templateUrl: "src/nav/menu/menu.html",
+				resolve : {
+					logged: function(LoginService) {
+						return LoginService.isAuth();
+					}
+				}
 			})
 			// Each tab has its own nav history stack:
 			.state('tab.my-place', {

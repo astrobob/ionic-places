@@ -1,9 +1,18 @@
-angular.module('places').factory("LoginService", function (FirebaseService) {
+angular.module('places').factory("LoginService", function (FirebaseService, $q) {
+
+	var logged = false;
+	var defer = $q.defer;
 
 	return {
 
-		login: function() {
+		isAuth: function() {
+			return logged ? defer.resolve() : defer.reject();
+		},
 
+		login: function(email,password) {
+			return FirebaseService.login(email,password).then(function(success) {
+				logged = true;
+			});
 		},
 
 		signUp:function(email, password){
