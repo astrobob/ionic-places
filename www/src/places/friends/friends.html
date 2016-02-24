@@ -4,8 +4,10 @@
           A
       </div>
 
-      <a class="item" href="#">
-          Alhan
-      </a>
+      <ion-item collection-repeat="item in clients">
+	      <a class="item" ui-sref="tab.friends.detail{{item._id}}">
+	          {{item.gender}} {{item.lastname | capitalize}} {{item.firstname | capitalize}}
+	      </a>
+      </ion-item>
   </ion-content>
 </ion-view>

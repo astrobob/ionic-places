@@ -48,7 +48,7 @@ angular.module('places')
 			.state('tab.friends', {
 				url: '/friends',
 				data:{
-					title:"Friends"
+					title:"Client"
 				},
 				views: {
 					'tab-friends': {
@@ -56,6 +56,20 @@ angular.module('places')
 						controller:'FriendsCtrl'
 					}
 				}
+			})
+/*
+			.state('tab.friends.detail', {
+				url: '/friends/detail/:id',
+				data:{
+					title:"Friend detail"
+				},
+				views: {
+					'tab-friends-detail': {
+						templateUrl: 'src/places/friends/friends-detail.html',
+						controller:'FriendsCtrl'
+					}
+				}
 			});
+*/
 
 	});
