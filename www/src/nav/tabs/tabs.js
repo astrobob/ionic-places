@@ -57,19 +57,17 @@ angular.module('places')
 					}
 				}
 			})
-/*
-			.state('tab.friends.detail', {
-				url: '/friends/detail/:id',
+			.state('tab.detail', {
+				url: '/detail/:id',
 				data:{
 					title:"Friend detail"
 				},
 				views: {
-					'tab-friends-detail': {
+					'tab-friends': {
 						templateUrl: 'src/places/friends/friends-detail.html',
 						controller:'FriendsCtrl'
 					}
 				}
 			});
-*/
 
 	});

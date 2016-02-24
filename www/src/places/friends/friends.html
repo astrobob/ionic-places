@@ -5,8 +5,8 @@
       </div>
 
       <ion-item collection-repeat="item in clients">
-	      <a class="item" ui-sref="tab.friends.detail{{item._id}}">
-	          {{item.gender}} {{item.lastname | capitalize}} {{item.firstname | capitalize}}
+	      <a class="item" ui-sref="tab.detail({id: item._id})">
+	          {{item.gender}} {{item.lastname | capitalize}} {{item.firstname | capitalize}} {{item._id}}
 	      </a>
       </ion-item>
   </ion-content>

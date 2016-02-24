@@ -1,11 +1,11 @@
 angular.module('places')
-	.controller('FriendsCtrl', function($scope, $ionicLoading,FriendsService, $state) {
+	.controller('FriendsCtrl', function($scope, $ionicLoading,FriendsService, $stateParams) {
 		$scope.clients = new Array();
 		FriendsService.getFriends().then(function(data) {
 			$scope.clients = data;
 		});
 		
-		console.log($state.id);
+		console.log($stateParams.id);
 	})
 	.filter('capitalize', function() {
 	    return function(input) {
